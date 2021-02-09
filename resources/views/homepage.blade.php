@@ -9,9 +9,15 @@
 <body>
 
 	<h1>PROVA HOMEPAGE</h1>
-	@php
-			dd($cars);
-	@endphp
+	@foreach ($cars as $item)
+
+		<p>{{ $item->marca }}</p>
+		<p>{{ $item->modello }}</p>
+		<p>{{ $item->targa }}</p>
+		<img src="{{ $item->foto }}" alt="" style="width:300px">
+			
+	@endforeach
+	
 	
 </body>
 </html>
