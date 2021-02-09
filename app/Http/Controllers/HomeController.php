@@ -11,5 +11,11 @@ class HomeController extends Controller
         $cars = Car::all();
         return view('homepage', ['cars' => $cars]);
     }
+
+    public function show($id){
+        $carDetail = Car::all()
+            ->where('id', '=', $id);
+        return view('detail', ['id' => $id, 'carDetail' => $carDetail]);
+    }
 }
 
